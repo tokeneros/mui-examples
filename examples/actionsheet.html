@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">操作表</h1>
+		</header>
+		<!-- mui-bar-tab指定为下方选项卡 -->
+		<!-- tab平均分割 -->
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item" href="#delete">
+				<span class="mui-icon mui-icon-trash"></span>
+			</a>
+			<a class="mui-tab-item" href="#">
+				<span class="mui-icon"></span>
+			</a>
+			<a class="mui-tab-item" href="#">
+				<span class="mui-icon"></span>
+			</a>
+			<a class="mui-tab-item" href="#forward">
+				<span class="mui-icon mui-icon-undo"></span>
+			</a>
+		</nav>
+		<div class="mui-content">
+			<!-- mui-content-padded 外边距加10px -->
+			<div class="mui-content-padded" style="background: wheat;">
+				<!-- mui-btn-block 占据整个父div -->
+				<!-- mui-btn-outlined 透明化 -->
+				<a href="#picture" class="mui-btn mui-btn-primary mui-btn-block mui-btn-outlined">弹出照片获取</a>
+			</div>
+		</div>
+		<!-- mui-popover 将其隐藏,触发点击事件时显示 -->
+		<!-- mui-popover-action 开启屏障 -->
+		<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell" style="background: #4CD964;">
+					<a href="#">拍照或摄像</a>
+				</li>
+				<li class="mui-table-view-cell" style="background: #F0AD4E;">
+					<a href="#">选取本地</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#">取消</a>
+				</li>
+			</ul>
+		</div>
+		<div id="delete" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#" style="color: #FF3B30;">删除</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#">取消</a>
+				</li>
+			</ul>
+		</div>
+		<div id="forward" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#">回复</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#">转发</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#">打印</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#">取消</a>
+				</li>
+			</ul>
+		</div>
+		<script src="../js/mui.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>
