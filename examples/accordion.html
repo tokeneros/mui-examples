@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<div class="mui-title">折叠面板</div>
+		</header>
+		<div class="mui-content" style="background: #007AFF;">
+			<!-- 卡片视图 cardview -->
+			<!-- 主要使用mui-card来设置，分为页眉(header)、内容区(content)、页脚(footer) -->
+			<div class="mui-card" style="background: #2AC845;">
+				<!--页眉，放置标题-->
+				<div class="mui-card-header">页眉</div>
+				<!--内容区-->
+				<div class="mui-card-content">
+					<!-- 操作表 -->
+					<!-- 使用mui-table-view,mui-table-view-cell -->
+					<!-- mui-table-view-cell可以单独使用 -->
+					<ul class="mui-table-view">
+						<!-- 折叠面板 accordion -->
+						<!-- 使用 mui-collapse来标记,这个区域块点击都会展示mui-collapse-content内容 -->
+						<!-- 不受限于li标签使用，div也可以 -->
+						<li class="mui-table-view-cell mui-collapse">
+							<a class="mui-navigate-right" href="#">表单</a>
+							<div class="mui-collapse-content">
+								<!-- 表单 -->
+								<!-- 使用样式mui-input-group,每一行数据都使用mui-input-row包裹起来 -->
+								<!-- 使用label和input刚好，放其他可能样式会出问题 -->
+								<form class="mui-input-group">
+									<div class="mui-input-row">
+										<label>普通输入框</label>
+										<input type="text" placeholder="普通输入框..." style="background: #8A6DE9;"/>
+									</div>
+									<!-- mui-input-clear 后面会带一个清除按钮 -->
+									<div class="mui-input-row">
+										<label>mui-input-clear</label>
+										<input type="text" placeholder="mui-input-clear..." class="mui-input-clear" />
+									</div>
+									<!-- mui-plus-hidden和mui-plus-visible 在手机端和浏览器里是相反的
+									，hidden在浏览器端是可见，而在手机上是不可见，visible在浏览器里却成了不可见，在手机里可见！ -->
+									<div class="mui-input-row mui-plus-hideen">
+										<label>mui-input-speech</label>
+										<!-- mui-input-speech点击会调用语音 -->
+										<input type="text" placeholder="mui-input-speech..." class="mui-input-speech mui-input-clear" />	
+									</div>
+									<!-- 一行按钮 -->
+									<div class="mui-button-row" style="background: #F0AD4E;">
+										<button class="mui-btn mui-btn-primary" type="button" onclick="return false;">确认</button>&nbsp;&nbsp;
+										<button class="mui-btn mui-btn-grey" type="button" onclick="return false;">取消</button>&nbsp;&nbsp;
+									</div>
+								</form>
+							</div>
+						</li>
+						<li class="mui-table-view-cell mui-collapse">
+							<!-- mui-navigate-right 标签不要也没啥事 -->
+							<a class="mui-navigate-right" href="#">轮播图</a>
+							<div class="mui-collapse-content">
+								<div id="slider" class="mui-slider">
+									<!-- mui-slider-loop指定是否为轮播循环 -->
+									<div class="mui-slider-group mui-slider-loop">
+										<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+										<div class="mui-slider-item mui-slider-item-duplicate">
+											<a href="#">
+												<img src="../img/yuantiao.jpg">
+											</a>
+										</div>
+										<!-- 第一张 -->
+										<div class="mui-slider-item">
+											<a href="#">
+												<img src="../img/shuijiao.jpg">
+											</a>
+										</div>
+										<!-- 第二张 -->
+										<div class="mui-slider-item">
+											<a href="#">
+												<img src="../img/muwu.jpg">
+											</a>
+										</div>
+										<!-- 第三张 -->
+										<div class="mui-slider-item">
+											<a href="#">
+												<img src="../img/yuantiao.jpg">
+											</a>
+										</div>
+										<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+										<div class="mui-slider-item mui-slider-item-duplicate">
+											<a href="#">
+												<img src="../img/shuijiao.jpg">
+											</a>
+										</div>
+									</div>
+									<div class="mui-slider-indicator">
+										<div class="mui-indicator mui-active"></div>
+										<div class="mui-indicator"></div>
+										<div class="mui-indicator"></div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell mui-collapse">
+							<a class="mui-navigate-right" href="#">文字排版</a>
+							<div class="mui-collapse-content">
+								<h1 style="background: #C0C0C0;">Hello World!!!</h1>
+								<h2 style="background: #C333C3;">Hello World!!!</h2>
+								<h3 style="background: #C0C0C0;">Hello World!!!</h3>
+								<h4 style="background: #C333C3;">Hello World!!!</h4>
+								<h5 style="background: #C0C0C0;">Hello World!!!</h5>
+								<h6 style="background: #C333C3;">Hello World!!!</h6>
+								<p>Hello World!!!</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!--页脚，放置补充信息或支持的操作-->
+				<div class="mui-card-footer">页脚</div>
+			</div>
+		</div>
+		<script src="../js/mui.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				swipeBack:true //启用右滑关闭功能
+			})
+		</script>
+	</body>
+
+</html>
